@@ -1,0 +1,255 @@
+[gd_scene format=3 uid="uid://c3yghvswrlnq5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xxwa"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3cvb"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6onbd"]
+bg_color = Color(0.60933006, 0.6093301, 0.60933006, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_214ua"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_whjs2"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hnmaf"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4b7y6"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.60784316, 0.60784316, 0.60784316, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5xka1"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fqjtw"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 6.0
+expand_margin_right = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_02mhf"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+expand_margin_left = 6.0
+expand_margin_right = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ybv2"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.60784316, 0.60784316, 0.60784316, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+expand_margin_left = 6.0
+expand_margin_right = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p4vol"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Theme" id="Theme_q3cvb"]
+default_font_size = 40
+
+[node name="Menu" type="Node2D" unique_id=509173896]
+
+[node name="Background" type="Line2D" parent="." unique_id=2012761750]
+position = Vector2(328.80325, 77.26379)
+scale = Vector2(2.4803257, 2.6263785)
+points = PackedVector2Array(0, 0, 200, 0, 200, 200, 0, 200)
+closed = true
+
+[node name="MenuLabel" type="RichTextLabel" parent="." unique_id=747509335]
+offset_left = 512.8033
+offset_top = 104.80326
+offset_right = 632.8033
+offset_bottom = 165.80325
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 39
+text = "Menu"
+
+[node name="PlayButton" type="Button" parent="." unique_id=406100432]
+offset_left = 488.80328
+offset_top = 178.80325
+offset_right = 643.8033
+offset_bottom = 234.80325
+focus_neighbor_right = NodePath("../2Players")
+focus_neighbor_bottom = NodePath("../2Players")
+focus_next = NodePath("../2Players")
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_1xxwa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_q3cvb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6onbd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_214ua")
+text = "Play"
+
+[node name="2PlayersLabel" type="RichTextLabel" parent="." unique_id=1542879890]
+offset_left = 442.80328
+offset_top = 238.80325
+offset_right = 617.8033
+offset_bottom = 299.80325
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 39
+text = "2 Players"
+
+[node name="2Players" type="CheckBox" parent="." unique_id=157830308]
+offset_left = 622.8033
+offset_top = 243.80325
+offset_right = 646.8033
+offset_bottom = 267.80325
+scale = Vector2(2.1585588, 2.1585588)
+focus_neighbor_left = NodePath("../PlayButton")
+focus_neighbor_top = NodePath("../PlayButton")
+focus_neighbor_right = NodePath("../difficulty")
+focus_neighbor_bottom = NodePath("../difficulty")
+focus_next = NodePath("../difficulty")
+focus_previous = NodePath("../PlayButton")
+theme_override_styles/normal = SubResource("StyleBoxFlat_whjs2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hnmaf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4b7y6")
+theme_override_styles/focus = SubResource("StyleBoxFlat_5xka1")
+
+[node name="difficulty" type="OptionButton" parent="." unique_id=445457864]
+offset_left = 472.80328
+offset_top = 302.80325
+offset_right = 664.8033
+offset_bottom = 365.80325
+focus_neighbor_left = NodePath("../2Players")
+focus_neighbor_top = NodePath("../2Players")
+focus_neighbor_right = NodePath("../FirstTo")
+focus_neighbor_bottom = NodePath("../FirstTo")
+focus_next = NodePath("../FirstTo")
+focus_previous = NodePath("../2Players")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_fqjtw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_02mhf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1ybv2")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_p4vol")
+selected = 0
+item_count = 3
+popup/item_0/text = "Easy"
+popup/item_0/id = 0
+popup/item_1/text = "Medium"
+popup/item_1/id = 1
+popup/item_2/text = "Hard"
+popup/item_2/id = 2
+
+[node name="FirstToLabel" type="RichTextLabel" parent="." unique_id=431841579]
+offset_left = 415.80328
+offset_top = 378.80325
+offset_right = 590.8033
+offset_bottom = 439.80325
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 39
+text = "First to:"
+
+[node name="FirstTo" type="SpinBox" parent="." unique_id=1415223913]
+offset_left = 569.8033
+offset_top = 376.80325
+offset_right = 747.8033
+offset_bottom = 439.80325
+focus_neighbor_left = NodePath("../difficulty")
+focus_neighbor_top = NodePath("../difficulty")
+focus_neighbor_right = NodePath("../RestartButton")
+focus_neighbor_bottom = NodePath("../RestartButton")
+focus_next = NodePath("../RestartButton")
+focus_previous = NodePath("../difficulty")
+focus_mode = 2
+theme = SubResource("Theme_q3cvb")
+min_value = 1.0
+max_value = 10.0
+value = 3.0
+rounded = true
+custom_arrow_step = 1.0
+select_all_on_focus = true
+
+[node name="RestartButton" type="Button" parent="." unique_id=2107625168]
+offset_left = 495.80328
+offset_top = 452.80325
+offset_right = 650.8033
+offset_bottom = 508.80325
+focus_neighbor_left = NodePath("../FirstTo")
+focus_neighbor_top = NodePath("../FirstTo")
+focus_neighbor_right = NodePath("../QuitButton")
+focus_neighbor_bottom = NodePath("../QuitButton")
+focus_next = NodePath("../QuitButton")
+focus_previous = NodePath("../FirstTo")
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_1xxwa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_q3cvb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6onbd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_214ua")
+text = "Restart"
+
+[node name="QuitButton" type="Button" parent="." unique_id=219054127]
+offset_left = 493.80328
+offset_top = 522.8033
+offset_right = 648.8033
+offset_bottom = 578.8033
+focus_neighbor_left = NodePath("../RestartButton")
+focus_neighbor_top = NodePath("../RestartButton")
+focus_previous = NodePath("../RestartButton")
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_1xxwa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_q3cvb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6onbd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_214ua")
+text = "Quit"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="focus_entered" from="FirstTo" to="." method="_on_first_to_focus_entered"]
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
