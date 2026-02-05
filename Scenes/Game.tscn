@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ccfio5ekrcqnk"]
+
+[ext_resource type="Texture2D" uid="uid://cposv843fqj83" path="res://Textures/paddle.png" id="1_iukft"]
+[ext_resource type="Texture2D" uid="uid://cfpe57mldk77d" path="res://Textures/ball.png" id="2_gl6un"]
+
+[node name="Game" type="Node2D" unique_id=1170299081]
+
+[node name="Paddle" type="Sprite2D" parent="." unique_id=1135678793]
+position = Vector2(554, 492)
+texture = ExtResource("1_iukft")
+
+[node name="Ball" type="Sprite2D" parent="." unique_id=1725910017]
+position = Vector2(629, 515)
+texture = ExtResource("2_gl6un")

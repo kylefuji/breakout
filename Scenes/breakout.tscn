@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://ccfio5ekrcqnk"]
-
-[ext_resource type="PackedScene" uid="uid://c3yghvswrlnq5" path="res://Prefabs/menu.tscn" id="1_8gnll"]
-
-[node name="breakout" type="Node2D" unique_id=1170299081]
-
-[node name="Menu" parent="." unique_id=509173896 instance=ExtResource("1_8gnll")]

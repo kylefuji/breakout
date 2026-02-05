@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="breakout"
-run/main_scene="uid://ccfio5ekrcqnk"
+run/main_scene="uid://c3yghvswrlnq5"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
+[display]
 
-Global="*uid://cvsf1ojqy3mww"
+window/size/initial_position_type=0
+window/stretch/mode="viewport"
 
 [editor]
 
