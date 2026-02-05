@@ -3,12 +3,40 @@
 [ext_resource type="Texture2D" uid="uid://cposv843fqj83" path="res://Textures/paddle.png" id="1_iukft"]
 [ext_resource type="Texture2D" uid="uid://cfpe57mldk77d" path="res://Textures/ball.png" id="2_gl6un"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gl6un"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j5yw3"]
+size = Vector2(16, 32)
+
 [node name="Game" type="Node2D" unique_id=1170299081]
 
-[node name="Paddle" type="Sprite2D" parent="." unique_id=1135678793]
-position = Vector2(554, 492)
+[node name="Ball" type="CharacterBody2D" parent="." unique_id=1279301159]
+position = Vector2(542, 283)
+scale = Vector2(1.4723655, 1.4723655)
+
+[node name="BallSprite" type="Sprite2D" parent="Ball" unique_id=1725910017]
+texture = ExtResource("2_gl6un")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball" unique_id=1826392097]
+shape = SubResource("RectangleShape2D_gl6un")
+
+[node name="Paddle" type="CharacterBody2D" parent="." unique_id=1920950900]
+position = Vector2(546, 520)
+rotation = 1.5707964
+
+[node name="Paddle" type="Sprite2D" parent="Paddle" unique_id=1135678793]
 texture = ExtResource("1_iukft")
 
-[node name="Ball" type="Sprite2D" parent="." unique_id=1725910017]
-position = Vector2(629, 515)
-texture = ExtResource("2_gl6un")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paddle" unique_id=1584137122]
+shape = SubResource("RectangleShape2D_j5yw3")
+
+[node name="Tile" type="StaticBody2D" parent="." unique_id=84864564]
+position = Vector2(560, 95)
+rotation = 1.5707964
+
+[node name="Paddle" type="Sprite2D" parent="Tile" unique_id=1685630226]
+texture = ExtResource("1_iukft")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile" unique_id=1103627171]
+shape = SubResource("RectangleShape2D_j5yw3")
