@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dfkcfmpvp8tcf" path="res://Scripts/paddle.gd" id="2_j5yw3"]
 [ext_resource type="AudioStream" uid="uid://dqgyb2trihydn" path="res://Sounds/bounce_noise_0.wav" id="3_bf53h"]
 [ext_resource type="AudioStream" uid="uid://bhiwp0w7xqxrx" path="res://Sounds/bounce_noise_1.wav" id="4_71axn"]
+[ext_resource type="AudioStream" uid="uid://b0io1gfns36dq" path="res://Sounds/score.wav" id="7_3so38"]
 [ext_resource type="PackedScene" uid="uid://cu3qms6ml512q" path="res://Prefabs/tiles.tscn" id="7_bf53h"]
 [ext_resource type="FontFile" uid="uid://bgfaq8bg22e0w" path="res://Fonts/Tiny5-Regular.ttf" id="8_bf53h"]
 [ext_resource type="Script" uid="uid://c8nyiqlg7i5in" path="res://Scripts/death_area.gd" id="9_dahhg"]
@@ -42,6 +43,9 @@ stream = ExtResource("3_bf53h")
 
 [node name="BounceNoise1" type="AudioStreamPlayer" parent="Ball" unique_id=1348225257]
 stream = ExtResource("4_71axn")
+
+[node name="Score" type="AudioStreamPlayer" parent="Ball" unique_id=1410128916]
+stream = ExtResource("7_3so38")
 
 [node name="Paddle" type="CharacterBody2D" parent="." unique_id=1920950900]
 position = Vector2(576.00006, 632)

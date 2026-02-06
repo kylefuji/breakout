@@ -31,6 +31,10 @@ func _ready() -> void:
 	scoreText = gameScene.get_node("Score")
 	highScoreText = menuScene.get_node("HighScore")
 	endGameLabel = gameScene.get_node("EndGameLabel")
+	var score = load_from_file()
+	if score:
+		high_score = int(score)
+		menuScene.get_node("HighScore").text = "[center]High Score: %d[/center]" % high_score
 	
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_cancel") or Input.is_action_pressed("pause") and not event.is_echo():
@@ -61,6 +65,7 @@ func add_score(score:int) -> void:
 	if player_score > high_score:
 		high_score = player_score
 		highScoreText.text = "[center]High Score: %d[/center]" % high_score
+		save_to_file(str(high_score))
 
 func reset() -> void:
 	ball.reset()
@@ -72,3 +77,14 @@ func reset() -> void:
 	for i in range(lives, 0, -1):
 		print(i)
 		gameScene.get_node("Heart%d" % i).show()
+
+func save_to_file(content):
+	var file = FileAccess.open("user://save_game.dat", FileAccess.WRITE)
+	file.store_string(content)
+
+func load_from_file():
+	var file = FileAccess.open("user://save_game.dat", FileAccess.READ)
+	if file:
+		var content = file.get_as_text()
+		return content
+	return null

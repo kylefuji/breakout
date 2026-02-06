@@ -37,6 +37,8 @@ func _process(delta: float) -> void:
 			if len(Global.tiles.get_children()) <= 1:
 				Global.endGameLabel.text = "[center]You Win![/center]"
 				current_speed = 0
+				$Score.set_volume_db(-12)
+				$Score.play()
 			Global.add_score(10+current_speed/20)
 			
 		if collider.is_in_group("YellowTile"):
