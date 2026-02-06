@@ -25,10 +25,10 @@ func toggle_pause() -> void:
 func toggle_menu() -> void:
 	toggle_pause()
 	if is_paused:
-		menuOpenNoise.play()
+		#menuOpenNoise.play()
 		menuScene.start()
 		gameScene.hide()
 	else:
-		menuCloseNoise.play()
+		#menuCloseNoise.play()
 		menuScene.hide()
 		gameScene.show()
