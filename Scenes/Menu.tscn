@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c3yghvswrlnq5"]
 
-[ext_resource type="FontFile" uid="uid://bbn232ll25swm" path="res://Fonts/PixelifySans-VariableFont_wght.ttf" id="1_3kf3n"]
 [ext_resource type="Script" uid="uid://sy4qidygkloc" path="res://Scripts/menu.gd" id="1_6pedr"]
+[ext_resource type="FontFile" uid="uid://bgfaq8bg22e0w" path="res://Fonts/Tiny5-Regular.ttf" id="2_6pedr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xxwa"]
 bg_color = Color(0, 0, 0, 1)
@@ -19,15 +19,15 @@ bg_color = Color(1, 1, 1, 1)
 script = ExtResource("1_6pedr")
 
 [node name="Background" type="Line2D" parent="." unique_id=2012761750]
-position = Vector2(328.80325, 141.81895)
-scale = Vector2(2.3937197, 1.7818954)
+position = Vector2(338, 141.81895)
+scale = Vector2(2.3818185, 1.7818954)
 points = PackedVector2Array(0, 0, 200, 0, 200, 200, 0, 200)
 closed = true
 
 [node name="PlayButton" type="Button" parent="." unique_id=406100432]
-offset_left = 494.0
+offset_left = 497.0
 offset_top = 288.55518
-offset_right = 649.0
+offset_right = 652.0
 offset_bottom = 344.55518
 focus_neighbor_right = NodePath("../RestartButton")
 focus_neighbor_bottom = NodePath("../RestartButton")
@@ -35,7 +35,7 @@ focus_next = NodePath("../RestartButton")
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_3kf3n")
+theme_override_fonts/font = ExtResource("2_6pedr")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_1xxwa")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_q3cvb")
@@ -44,9 +44,9 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_214ua")
 text = "Play"
 
 [node name="RestartButton" type="Button" parent="." unique_id=2107625168]
-offset_left = 483.0
+offset_left = 486.0
 offset_top = 350.55518
-offset_right = 657.0
+offset_right = 660.0
 offset_bottom = 406.55518
 focus_neighbor_left = NodePath("../PlayButton")
 focus_neighbor_top = NodePath("../PlayButton")
@@ -57,7 +57,7 @@ focus_previous = NodePath("../PlayButton")
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_3kf3n")
+theme_override_fonts/font = ExtResource("2_6pedr")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_1xxwa")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_q3cvb")
@@ -66,9 +66,9 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_214ua")
 text = "Restart"
 
 [node name="QuitButton" type="Button" parent="." unique_id=219054127]
-offset_left = 494.0
+offset_left = 497.0
 offset_top = 417.0
-offset_right = 649.0
+offset_right = 652.0
 offset_bottom = 473.0
 focus_neighbor_left = NodePath("../RestartButton")
 focus_neighbor_top = NodePath("../RestartButton")
@@ -76,7 +76,7 @@ focus_previous = NodePath("../RestartButton")
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_3kf3n")
+theme_override_fonts/font = ExtResource("2_6pedr")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_1xxwa")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_q3cvb")
@@ -86,13 +86,12 @@ text = "Quit"
 
 [node name="HighScore" type="RichTextLabel" parent="." unique_id=822970078]
 custom_minimum_size = Vector2(400, 55)
-offset_left = 371.0
+offset_left = 374.0
 offset_top = 187.55518
-offset_right = 771.0
+offset_right = 774.0
 offset_bottom = 242.55518
 size_flags_horizontal = 3
-theme_override_fonts/normal_font = ExtResource("1_3kf3n")
-theme_override_fonts/bold_font = ExtResource("1_3kf3n")
+theme_override_fonts/normal_font = ExtResource("2_6pedr")
 theme_override_font_sizes/normal_font_size = 39
 theme_override_font_sizes/bold_font_size = 39
 bbcode_enabled = true

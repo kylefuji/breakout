@@ -1,17 +1,16 @@
-[gd_scene format=3 uid="uid://sf2qfcpiqo45"]
+[gd_scene format=3 uid="uid://cktcolnhxutif"]
 
-[ext_resource type="Texture2D" uid="uid://cposv843fqj83" path="res://Textures/paddle.png" id="1_8quy2"]
+[ext_resource type="Texture2D" uid="uid://cposv843fqj83" path="res://Textures/paddle.png" id="1_hacnt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j5yw3"]
 size = Vector2(16, 32)
 
-[node name="YellowTile" type="StaticBody2D" unique_id=1136691587]
-modulate = Color(0.968425, 0.7902133, 0, 1)
+[node name="Tile" type="StaticBody2D" unique_id=1136691587]
 rotation = 1.5707964
 scale = Vector2(2, 2.96)
 
 [node name="Paddle" type="Sprite2D" parent="." unique_id=1576091257]
-texture = ExtResource("1_8quy2")
+texture = ExtResource("1_hacnt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=245065185]
 shape = SubResource("RectangleShape2D_j5yw3")

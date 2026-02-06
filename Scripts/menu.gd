@@ -5,6 +5,11 @@ extends Node
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS 
 	Global.toggle_pause()
+	start()
+	
+
+func start() -> void:
+	$PlayButton.grab_focus()
 
 
 func _on_play_button_pressed() -> void:
@@ -12,8 +17,9 @@ func _on_play_button_pressed() -> void:
 
 
 func _on_restart_button_pressed() -> void:
-	pass # Replace with function body.
+	Global.reset()
+	Global.toggle_menu()
 
 
 func _on_quit_button_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().quit()

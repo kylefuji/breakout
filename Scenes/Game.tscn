@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://ccfio5ekrcqnk"]
 
 [ext_resource type="Script" uid="uid://bo8ha1vwkw0hu" path="res://Scripts/ball.gd" id="1_2irst"]
+[ext_resource type="Script" uid="uid://vr07dd0o88st" path="res://Scripts/game.gd" id="1_bf53h"]
 [ext_resource type="Texture2D" uid="uid://cposv843fqj83" path="res://Textures/paddle.png" id="1_iukft"]
 [ext_resource type="Texture2D" uid="uid://cfpe57mldk77d" path="res://Textures/ball.png" id="2_gl6un"]
 [ext_resource type="Script" uid="uid://dfkcfmpvp8tcf" path="res://Scripts/paddle.gd" id="2_j5yw3"]
-[ext_resource type="PackedScene" uid="uid://b53p1y456dvrj" path="res://Prefabs/red_tile.tscn" id="4_kldst"]
-[ext_resource type="PackedScene" uid="uid://cngy6wglw8rwx" path="res://Prefabs/orange_tile.tscn" id="5_fgofq"]
-[ext_resource type="PackedScene" uid="uid://sf2qfcpiqo45" path="res://Prefabs/yellow_tile.tscn" id="6_2irst"]
-[ext_resource type="PackedScene" uid="uid://c672h4is6aq7j" path="res://Prefabs/green_tile.tscn" id="7_bf53h"]
-[ext_resource type="FontFile" uid="uid://bbn232ll25swm" path="res://Fonts/PixelifySans-VariableFont_wght.ttf" id="9_bf53h"]
+[ext_resource type="AudioStream" uid="uid://dqgyb2trihydn" path="res://Sounds/bounce_noise_0.wav" id="3_bf53h"]
+[ext_resource type="AudioStream" uid="uid://bhiwp0w7xqxrx" path="res://Sounds/bounce_noise_1.wav" id="4_71axn"]
+[ext_resource type="PackedScene" uid="uid://cu3qms6ml512q" path="res://Prefabs/tiles.tscn" id="7_bf53h"]
+[ext_resource type="FontFile" uid="uid://bgfaq8bg22e0w" path="res://Fonts/Tiny5-Regular.ttf" id="8_bf53h"]
+[ext_resource type="Script" uid="uid://c8nyiqlg7i5in" path="res://Scripts/death_area.gd" id="9_dahhg"]
 [ext_resource type="Texture2D" uid="uid://b8i20xuxjbh2p" path="res://Textures/heart.png" id="10_71axn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gl6un"]
@@ -22,9 +23,11 @@ size = Vector2(16, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b2bpf"]
 
 [node name="Game" type="Node2D" unique_id=1170299081]
+script = ExtResource("1_bf53h")
+tilesScene = ExtResource("7_bf53h")
 
 [node name="Ball" type="CharacterBody2D" parent="." unique_id=1279301159]
-position = Vector2(51, 233)
+position = Vector2(576, 461)
 scale = Vector2(2, 2)
 script = ExtResource("1_2irst")
 
@@ -34,24 +37,42 @@ texture = ExtResource("2_gl6un")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ball" unique_id=1826392097]
 shape = SubResource("RectangleShape2D_gl6un")
 
+[node name="BounceNoise0" type="AudioStreamPlayer" parent="Ball" unique_id=284131682]
+stream = ExtResource("3_bf53h")
+
+[node name="BounceNoise1" type="AudioStreamPlayer" parent="Ball" unique_id=1348225257]
+stream = ExtResource("4_71axn")
+
 [node name="Paddle" type="CharacterBody2D" parent="." unique_id=1920950900]
-position = Vector2(596, 632)
+position = Vector2(576.00006, 632)
 rotation = 1.5707964
-scale = Vector2(2, 5)
+scale = Vector2(2, 6.0000124)
 script = ExtResource("2_j5yw3")
 
-[node name="Paddle" type="Sprite2D" parent="Paddle" unique_id=1135678793]
+[node name="PaddleEasy" type="Sprite2D" parent="Paddle" unique_id=1135678793]
 texture = ExtResource("1_iukft")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paddle" unique_id=1584137122]
+[node name="CollisionShape2DEasy" type="CollisionShape2D" parent="Paddle" unique_id=1584137122]
 shape = SubResource("RectangleShape2D_j5yw3")
 
-[node name="GameOverArea" type="Area2D" parent="." unique_id=1665361745]
+[node name="PaddleHard" type="Sprite2D" parent="Paddle" unique_id=356417712]
+visible = false
+scale = Vector2(1, 0.66666734)
+texture = ExtResource("1_iukft")
+
+[node name="CollisionShape2DHard" type="CollisionShape2D" parent="Paddle" unique_id=773208204]
+visible = false
+scale = Vector2(1, 0.66666734)
+shape = SubResource("RectangleShape2D_j5yw3")
+disabled = true
+
+[node name="DeathArea" type="Area2D" parent="." unique_id=1665361745]
 position = Vector2(571, 744.00006)
 rotation = -1.5707964
 scale = Vector2(9.562355, 63.762344)
+script = ExtResource("9_dahhg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GameOverArea" unique_id=2091607650]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathArea" unique_id=2091607650]
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_kldst")
 
@@ -77,35 +98,30 @@ scale = Vector2(6.5047874, 63.10479)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3" unique_id=274611677]
 shape = SubResource("RectangleShape2D_b2bpf")
 
-[node name="Tiles" type="Node2D" parent="." unique_id=563043248]
-
-[node name="RedTile" parent="Tiles" unique_id=1136691587 instance=ExtResource("4_kldst")]
-position = Vector2(48, 68)
-
-[node name="OrangeTile" parent="Tiles" unique_id=1841495665 instance=ExtResource("5_fgofq")]
-position = Vector2(48, 101)
-
-[node name="YellowTile" parent="Tiles" unique_id=375527934 instance=ExtResource("6_2irst")]
-position = Vector2(48, 134)
-
-[node name="GreenTile" parent="Tiles" unique_id=1996166353 instance=ExtResource("7_bf53h")]
-position = Vector2(48, 167)
-
 [node name="LivesLabel" type="RichTextLabel" parent="." unique_id=1060734999]
 offset_left = 85.0
 offset_top = 1.0
 offset_right = 253.0
 offset_bottom = 57.0
-theme_override_fonts/normal_font = ExtResource("9_bf53h")
+theme_override_fonts/normal_font = ExtResource("8_bf53h")
 theme_override_font_sizes/normal_font_size = 39
 text = "Lives:"
+
+[node name="EndGameLabel" type="RichTextLabel" parent="." unique_id=606142775]
+offset_left = 320.0
+offset_top = 258.0
+offset_right = 823.0
+offset_bottom = 454.0
+theme_override_fonts/normal_font = ExtResource("8_bf53h")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
 
 [node name="ScoreLabel" type="RichTextLabel" parent="." unique_id=1339226134]
 offset_left = 859.0
 offset_top = 1.0
 offset_right = 1027.0
 offset_bottom = 57.0
-theme_override_fonts/normal_font = ExtResource("9_bf53h")
+theme_override_fonts/normal_font = ExtResource("8_bf53h")
 theme_override_font_sizes/normal_font_size = 39
 text = "Score: "
 
@@ -114,11 +130,11 @@ offset_left = 991.0
 offset_top = 1.0
 offset_right = 1159.0
 offset_bottom = 57.0
-theme_override_fonts/normal_font = ExtResource("9_bf53h")
+theme_override_fonts/normal_font = ExtResource("8_bf53h")
 theme_override_font_sizes/normal_font_size = 39
 text = "0"
 
-[node name="Heart" type="Sprite2D" parent="." unique_id=1432618374]
+[node name="Heart1" type="Sprite2D" parent="." unique_id=1432618374]
 position = Vector2(225, 28.000002)
 scale = Vector2(3, 3)
 texture = ExtResource("10_71axn")
@@ -132,3 +148,10 @@ texture = ExtResource("10_71axn")
 position = Vector2(321, 28)
 scale = Vector2(3, 3)
 texture = ExtResource("10_71axn")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1432030975]
+position = Vector2(-10, 51)
+points = PackedVector2Array(0, 0, 1200, 0)
+width = 3.0
+
+[connection signal="body_entered" from="DeathArea" to="DeathArea" method="_on_body_entered"]
