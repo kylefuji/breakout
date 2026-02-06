@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://c3yghvswrlnq5"]
+
+[ext_resource type="Script" uid="uid://sy4qidygkloc" path="res://Scripts/menu.gd" id="1_6pedr"]
+[ext_resource type="FontFile" uid="uid://bgfaq8bg22e0w" path="res://Fonts/Tiny5-Regular.ttf" id="2_6pedr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xxwa"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3cvb"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6onbd"]
+bg_color = Color(0.60933006, 0.6093301, 0.60933006, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_214ua"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Menu" type="Node2D" unique_id=509173896]
+script = ExtResource("1_6pedr")
+
+[node name="Background" type="Line2D" parent="." unique_id=2012761750]
+position = Vector2(338, 141.81895)
+scale = Vector2(2.3818185, 1.7818954)
+points = PackedVector2Array(0, 0, 200, 0, 200, 200, 0, 200)
+closed = true
+
+[node name="PlayButton" type="Button" parent="." unique_id=406100432]
+offset_left = 497.0
+offset_top = 288.55518
+offset_right = 652.0
+offset_bottom = 344.55518
+focus_neighbor_right = NodePath("../RestartButton")
+focus_neighbor_bottom = NodePath("../RestartButton")
+focus_next = NodePath("../RestartButton")
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_6pedr")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_1xxwa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_q3cvb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6onbd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_214ua")
+text = "Play"
+
+[node name="RestartButton" type="Button" parent="." unique_id=2107625168]
+offset_left = 486.0
+offset_top = 350.55518
+offset_right = 660.0
+offset_bottom = 406.55518
+focus_neighbor_left = NodePath("../PlayButton")
+focus_neighbor_top = NodePath("../PlayButton")
+focus_neighbor_right = NodePath("../QuitButton")
+focus_neighbor_bottom = NodePath("../QuitButton")
+focus_next = NodePath("../QuitButton")
+focus_previous = NodePath("../PlayButton")
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_6pedr")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_1xxwa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_q3cvb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6onbd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_214ua")
+text = "Restart"
+
+[node name="QuitButton" type="Button" parent="." unique_id=219054127]
+offset_left = 497.0
+offset_top = 417.0
+offset_right = 652.0
+offset_bottom = 473.0
+focus_neighbor_left = NodePath("../RestartButton")
+focus_neighbor_top = NodePath("../RestartButton")
+focus_previous = NodePath("../RestartButton")
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_6pedr")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_1xxwa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_q3cvb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6onbd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_214ua")
+text = "Quit"
+
+[node name="HighScore" type="RichTextLabel" parent="." unique_id=822970078]
+custom_minimum_size = Vector2(400, 55)
+offset_left = 374.0
+offset_top = 187.55518
+offset_right = 774.0
+offset_bottom = 242.55518
+size_flags_horizontal = 3
+theme_override_fonts/normal_font = ExtResource("2_6pedr")
+theme_override_font_sizes/normal_font_size = 39
+theme_override_font_sizes/bold_font_size = 39
+bbcode_enabled = true
+text = "[center]High Score: 0[/center]"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

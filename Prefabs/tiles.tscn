@@ -1,0 +1,293 @@
+[gd_scene format=3 uid="uid://cu3qms6ml512q"]
+
+[ext_resource type="PackedScene" uid="uid://cktcolnhxutif" path="res://Prefabs/tile.tscn" id="1_0fhmw"]
+
+[node name="Tiles" type="Node2D" unique_id=1601152789]
+
+[node name="RedTile" type="Node2D" parent="." unique_id=2058120751]
+position = Vector2(48, 69)
+
+[node name="Tile" parent="RedTile" unique_id=1136691587 groups=["RedTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0, 0, 1)
+
+[node name="OrangeTile" type="Node2D" parent="." unique_id=1903883248]
+position = Vector2(48, 102)
+
+[node name="Tile" parent="OrangeTile" unique_id=719385486 groups=["OrangeTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0.5372549, 0.20392157, 1)
+
+[node name="YellowTile" type="Node2D" parent="." unique_id=1829160609]
+position = Vector2(48, 135)
+
+[node name="Tile" parent="YellowTile" unique_id=474822467 groups=["YellowTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0.9529412, 0.78039217, 0, 1)
+
+[node name="GreenTile" type="Node2D" parent="." unique_id=1775103456]
+position = Vector2(48, 168)
+
+[node name="Tile" parent="GreenTile" unique_id=1193746075 groups=["GreenTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0, 1, 0, 1)
+
+[node name="RedTile2" type="Node2D" parent="." unique_id=2106447091]
+position = Vector2(144, 69)
+
+[node name="Tile" parent="RedTile2" unique_id=2042957009 groups=["RedTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0, 0, 1)
+
+[node name="OrangeTile2" type="Node2D" parent="." unique_id=2000006873]
+position = Vector2(144, 102)
+
+[node name="Tile" parent="OrangeTile2" unique_id=717543224 groups=["OrangeTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0.5372549, 0.20392157, 1)
+
+[node name="YellowTile2" type="Node2D" parent="." unique_id=1598720558]
+position = Vector2(144, 135)
+
+[node name="Tile" parent="YellowTile2" unique_id=75827062 groups=["YellowTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0.9529412, 0.78039217, 0, 1)
+
+[node name="GreenTile2" type="Node2D" parent="." unique_id=1165131450]
+position = Vector2(144, 168)
+
+[node name="Tile" parent="GreenTile2" unique_id=1779972810 groups=["GreenTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0, 1, 0, 1)
+
+[node name="RedTile3" type="Node2D" parent="." unique_id=1440584392]
+position = Vector2(240, 69)
+
+[node name="Tile" parent="RedTile3" unique_id=1187656999 groups=["RedTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0, 0, 1)
+
+[node name="OrangeTile3" type="Node2D" parent="." unique_id=228468795]
+position = Vector2(240, 102)
+
+[node name="Tile" parent="OrangeTile3" unique_id=11328915 groups=["OrangeTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0.5372549, 0.20392157, 1)
+
+[node name="YellowTile3" type="Node2D" parent="." unique_id=2073529256]
+position = Vector2(240, 135)
+
+[node name="Tile" parent="YellowTile3" unique_id=1828421644 groups=["YellowTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0.9529412, 0.78039217, 0, 1)
+
+[node name="GreenTile3" type="Node2D" parent="." unique_id=1014428455]
+position = Vector2(240, 168)
+
+[node name="Tile" parent="GreenTile3" unique_id=2140464827 groups=["GreenTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0, 1, 0, 1)
+
+[node name="RedTile4" type="Node2D" parent="." unique_id=372536632]
+position = Vector2(336, 69)
+
+[node name="Tile" parent="RedTile4" unique_id=1433512320 groups=["RedTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0, 0, 1)
+
+[node name="OrangeTile4" type="Node2D" parent="." unique_id=1117805861]
+position = Vector2(336, 102)
+
+[node name="Tile" parent="OrangeTile4" unique_id=2081885603 groups=["OrangeTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0.5372549, 0.20392157, 1)
+
+[node name="YellowTile4" type="Node2D" parent="." unique_id=162665114]
+position = Vector2(336, 135)
+
+[node name="Tile" parent="YellowTile4" unique_id=55117127 groups=["YellowTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0.9529412, 0.78039217, 0, 1)
+
+[node name="GreenTile4" type="Node2D" parent="." unique_id=1630953608]
+position = Vector2(336, 168)
+
+[node name="Tile" parent="GreenTile4" unique_id=2100593480 groups=["GreenTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0, 1, 0, 1)
+
+[node name="RedTile5" type="Node2D" parent="." unique_id=885772137]
+position = Vector2(432, 69)
+
+[node name="Tile" parent="RedTile5" unique_id=1031844695 groups=["RedTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0, 0, 1)
+
+[node name="OrangeTile5" type="Node2D" parent="." unique_id=84769044]
+position = Vector2(432, 102)
+
+[node name="Tile" parent="OrangeTile5" unique_id=250345054 groups=["OrangeTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0.5372549, 0.20392157, 1)
+
+[node name="YellowTile5" type="Node2D" parent="." unique_id=162320569]
+position = Vector2(432, 135)
+
+[node name="Tile" parent="YellowTile5" unique_id=736352172 groups=["YellowTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0.9529412, 0.78039217, 0, 1)
+
+[node name="GreenTile5" type="Node2D" parent="." unique_id=699074442]
+position = Vector2(432, 168)
+
+[node name="Tile" parent="GreenTile5" unique_id=712390677 groups=["GreenTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0, 1, 0, 1)
+
+[node name="RedTile6" type="Node2D" parent="." unique_id=1069771853]
+position = Vector2(528, 69)
+
+[node name="Tile" parent="RedTile6" unique_id=355753561 groups=["RedTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0, 0, 1)
+
+[node name="OrangeTile6" type="Node2D" parent="." unique_id=1328170347]
+position = Vector2(528, 102)
+
+[node name="Tile" parent="OrangeTile6" unique_id=1660195500 groups=["OrangeTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0.5372549, 0.20392157, 1)
+
+[node name="YellowTile6" type="Node2D" parent="." unique_id=1149620076]
+position = Vector2(528, 135)
+
+[node name="Tile" parent="YellowTile6" unique_id=1024662325 groups=["YellowTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0.9529412, 0.78039217, 0, 1)
+
+[node name="GreenTile6" type="Node2D" parent="." unique_id=125939151]
+position = Vector2(528, 168)
+
+[node name="Tile" parent="GreenTile6" unique_id=672696194 groups=["GreenTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0, 1, 0, 1)
+
+[node name="RedTile7" type="Node2D" parent="." unique_id=2067971761]
+position = Vector2(624, 69)
+
+[node name="Tile" parent="RedTile7" unique_id=830477940 groups=["RedTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0, 0, 1)
+
+[node name="OrangeTile7" type="Node2D" parent="." unique_id=1488985865]
+position = Vector2(624, 102)
+
+[node name="Tile" parent="OrangeTile7" unique_id=109842806 groups=["OrangeTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0.5372549, 0.20392157, 1)
+
+[node name="YellowTile7" type="Node2D" parent="." unique_id=313129575]
+position = Vector2(624, 135)
+
+[node name="Tile" parent="YellowTile7" unique_id=494333426 groups=["YellowTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0.9529412, 0.78039217, 0, 1)
+
+[node name="GreenTile7" type="Node2D" parent="." unique_id=1760641750]
+position = Vector2(624, 168)
+
+[node name="Tile" parent="GreenTile7" unique_id=809376304 groups=["GreenTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0, 1, 0, 1)
+
+[node name="RedTile8" type="Node2D" parent="." unique_id=119940457]
+position = Vector2(720, 69)
+
+[node name="Tile" parent="RedTile8" unique_id=2085449338 groups=["RedTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0, 0, 1)
+
+[node name="OrangeTile8" type="Node2D" parent="." unique_id=675749320]
+position = Vector2(720, 102)
+
+[node name="Tile" parent="OrangeTile8" unique_id=2027726097 groups=["OrangeTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0.5372549, 0.20392157, 1)
+
+[node name="YellowTile8" type="Node2D" parent="." unique_id=1267825575]
+position = Vector2(720, 135)
+
+[node name="Tile" parent="YellowTile8" unique_id=1842563923 groups=["YellowTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0.9529412, 0.78039217, 0, 1)
+
+[node name="GreenTile8" type="Node2D" parent="." unique_id=1020712011]
+position = Vector2(720, 168)
+
+[node name="Tile" parent="GreenTile8" unique_id=1933773332 groups=["GreenTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0, 1, 0, 1)
+
+[node name="RedTile9" type="Node2D" parent="." unique_id=1648412680]
+position = Vector2(816, 69)
+
+[node name="Tile" parent="RedTile9" unique_id=789496992 groups=["RedTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0, 0, 1)
+
+[node name="OrangeTile9" type="Node2D" parent="." unique_id=1616519652]
+position = Vector2(816, 102)
+
+[node name="Tile" parent="OrangeTile9" unique_id=1971426107 groups=["OrangeTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0.5372549, 0.20392157, 1)
+
+[node name="YellowTile9" type="Node2D" parent="." unique_id=677109014]
+position = Vector2(816, 135)
+
+[node name="Tile" parent="YellowTile9" unique_id=886300032 groups=["YellowTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0.9529412, 0.78039217, 0, 1)
+
+[node name="GreenTile9" type="Node2D" parent="." unique_id=1469088179]
+position = Vector2(816, 168)
+
+[node name="Tile" parent="GreenTile9" unique_id=1850663212 groups=["GreenTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0, 1, 0, 1)
+
+[node name="RedTile10" type="Node2D" parent="." unique_id=1192200264]
+position = Vector2(912, 69)
+
+[node name="Tile" parent="RedTile10" unique_id=202389010 groups=["RedTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0, 0, 1)
+
+[node name="OrangeTile10" type="Node2D" parent="." unique_id=772143021]
+position = Vector2(912, 102)
+
+[node name="Tile" parent="OrangeTile10" unique_id=2056321833 groups=["OrangeTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0.5372549, 0.20392157, 1)
+
+[node name="YellowTile10" type="Node2D" parent="." unique_id=968221957]
+position = Vector2(912, 135)
+
+[node name="Tile" parent="YellowTile10" unique_id=932128701 groups=["YellowTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0.9529412, 0.78039217, 0, 1)
+
+[node name="GreenTile10" type="Node2D" parent="." unique_id=216494391]
+position = Vector2(912, 168)
+
+[node name="Tile" parent="GreenTile10" unique_id=2052890565 groups=["GreenTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0, 1, 0, 1)
+
+[node name="RedTile11" type="Node2D" parent="." unique_id=224188302]
+position = Vector2(1008, 69)
+
+[node name="Tile" parent="RedTile11" unique_id=1473333026 groups=["RedTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0, 0, 1)
+
+[node name="OrangeTile11" type="Node2D" parent="." unique_id=1545769759]
+position = Vector2(1008, 102)
+
+[node name="Tile" parent="OrangeTile11" unique_id=1236866673 groups=["OrangeTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0.5372549, 0.20392157, 1)
+
+[node name="YellowTile11" type="Node2D" parent="." unique_id=1097407422]
+position = Vector2(1008, 135)
+
+[node name="Tile" parent="YellowTile11" unique_id=576179614 groups=["YellowTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0.9529412, 0.78039217, 0, 1)
+
+[node name="GreenTile11" type="Node2D" parent="." unique_id=1612842089]
+position = Vector2(1008, 168)
+
+[node name="Tile" parent="GreenTile11" unique_id=1733262954 groups=["GreenTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0, 1, 0, 1)
+
+[node name="RedTile12" type="Node2D" parent="." unique_id=494966569]
+position = Vector2(1104, 69)
+
+[node name="Tile" parent="RedTile12" unique_id=511192079 groups=["RedTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0, 0, 1)
+
+[node name="OrangeTile12" type="Node2D" parent="." unique_id=706829264]
+position = Vector2(1104, 102)
+
+[node name="Tile" parent="OrangeTile12" unique_id=2098026337 groups=["OrangeTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(1, 0.5372549, 0.20392157, 1)
+
+[node name="YellowTile12" type="Node2D" parent="." unique_id=341985354]
+position = Vector2(1104, 135)
+
+[node name="Tile" parent="YellowTile12" unique_id=934682284 groups=["YellowTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0.9529412, 0.78039217, 0, 1)
+
+[node name="GreenTile12" type="Node2D" parent="." unique_id=1303001614]
+position = Vector2(1104, 168)
+
+[node name="Tile" parent="GreenTile12" unique_id=2085496081 groups=["GreenTile"] instance=ExtResource("1_0fhmw")]
+modulate = Color(0, 1, 0, 1)
